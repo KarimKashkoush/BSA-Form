@@ -1,0 +1,113 @@
+:root {
+    --main-color: #000;
+    --sub-color: #000;
+    --w-color: #000;
+    --b-color: #000;
+    --main-text-color: #000;
+    --sub-text-color: #000;
+
+    --fw-Medium-500: 500;
+    --fw-SemiBold-600: 600;
+    --fw-Bold-700: 700;
+    --fw-ExtraBold-800 : 800;
+
+    --transition-3: ease 0.3s;
+    --transition-5: ease 0.5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 786px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+img,
+a {
+    display: inline-block;
+}
+
+.container {
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+@media (min-width: 786px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 991px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .container {
+        width: 1150px;
+    }
+}
