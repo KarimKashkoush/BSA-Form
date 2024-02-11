@@ -108,7 +108,8 @@ a {
 /* Start home */
 .home {
     background-color: #e0e0e0d0;
-    height: 100vh;
+    min-height: 100vh;
+    padding-block: 30px;
 }
 
 .container,
@@ -117,12 +118,14 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 100px;
 }
 
 .contact-form h2 {
     text-transform: capitalize;
     font-size: 32px;
     margin-bottom: 35px;
+    color: #0086cf;
 }
 
 
@@ -135,9 +138,12 @@ a {
     width: 100%;
     background-color: #fff;
 }
-.contact-form .label {
+
+label {
     display: block;
     padding: 10px 30px;
+    color: #0086cf;
+    text-transform: capitalize;
 }
 
 .contact-form button {
@@ -147,5 +153,65 @@ a {
     padding: 15px 20px;
     border-radius: 100px;
     cursor: pointer;
+    color: #0086cf;
+}
+
+.container .image {
+    position: relative;
+    animation: ro 4s infinite linear;
+}
+
+.container .image::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #0086cf;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid #0086cf;
+    border-right: 5px solid transparent;
+    border-radius: 100%;
+    animation: rotate 4s infinite linear;
+}
+@keyframes rotate {
+    100% {
+        rotate : 360deg;
+    }
+}
+.container .image img {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+}
+
+.container .contact-form {
+    flex: 2;
+}
+
+@media (max-width: 1200px) {
+    .home .container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .container .image img {
+        width: 300px;
+        height: 300px;
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .home .container {
+        flex-direction: column-reverse;
+    }
+    .container .image img {
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+    }
+    
 }
 /* End home */

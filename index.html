@@ -9,7 +9,8 @@
     <!-- Font Awesome Css -->
     <link rel="stylesheet" href="assets/css/all.css" />
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- Normalize css file -->
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <!-- css file -->
@@ -24,28 +25,45 @@
         <section class="container">
             <form name="contact-form" class="contact-form">
                 <h2>registration form</h2>
-                <section class="name">
-                    <input type="text" placeholder="Enter Your Name" id="name" name="Name"/>
+                <section class="name-ar">
+                    <label for="nameAr">Enter your third name in Arabic</label>
+                    <input type="text" placeholder="Enter Your Third Name In Arabic" id="nameAr" name="Name" />
                 </section>
-                <section class="id">
-                    <input type="text" placeholder="Enter Your National Id" id="id" name="Id"/>
+
+                <section class="name-en">
+                    <label for="nameArabic">Enter your third name in English</label>
+                    <input type="text" placeholder="Enter Your Third Name In English" id="nameArabic" name="Name" />
                 </section>
+
                 <section class="email">
-                    <input type="email" placeholder="Enter Your Email" name="email"/>
+                    <label for="email">Enter Your Email</label>
+                    <input type="email" placeholder="Enter Your Email" name="email" />
                 </section>
+                
+                <section class="National-id">
+                    <label for="nationalId">Enter Your National Id</label>
+                    <input type="text" placeholder="Enter Your National Id" id="nationalId" name="nationalId" />
+                </section>
+                
                 <section class="phone">
-                    <input type="tel" placeholder="Enter Your phone number" name="phone"/>
+                    <label for="phone">Enter Your National Id</label>
+                    <input type="tel" placeholder="Enter Your phone number" name="phone" id="phone"/>
                 </section>
+
                 <section class="department">
-                    <label for="department" class="label">If You Are A Student, Enter the Department, and if you are a graduate, write your graduation year</label>
+                    <label for="department" class="label">If You Are A Student, Enter the Department, and if you are a
+                        graduate, write your graduation year</label>
                     <input type="text" placeholder="Enter Your Department" id="department" name="department">
                 </section>
-                <section class="image">
+                <section class="image-form">
                     <label for="image" class="label">Attach aa img of your national id card</label>
-                    <input type="file" id="image"/>
+                    <input type="file" id="image" />
                 </section>
                 <button>Send <i class="fa-solid fa-arrow-right"></i></button>
             </form>
+            <section class="image">
+                <img src="assets/images/logo.png">
+            </section>
         </section>
     </section>
 
