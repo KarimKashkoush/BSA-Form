@@ -27,22 +27,27 @@
                 <h2>registration form</h2>
                 <section class="name-ar">
                     <label for="nameAr">Enter your third name in Arabic</label>
-                    <input type="text" placeholder="Enter Your Third Name In Arabic" id="nameAr" name="Name" />
+                    <input type="text" placeholder="Enter Your Third Name In Arabic" id="nameAr" name="NameAr" />
                 </section>
 
                 <section class="name-en">
-                    <label for="nameArabic">Enter your third name in English</label>
-                    <input type="text" placeholder="Enter Your Third Name In English" id="nameArabic" name="Name" />
+                    <label for="nameEn">Enter your third name in English</label>
+                    <input type="text" placeholder="Enter Your Third Name In English" id="nameEn" name="NameEn" />
+                </section>
+
+                <section class="Gender">
+                    <label for="Gender">Enter Your gender</label>
+                    <select name="Gender" id="Gender">
+                        <option value="0" selected>Enter Your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
                 </section>
 
                 <section class="email">
                     <label for="email">Enter Your Email</label>
-                    <input type="email" placeholder="Enter Your Email" name="email" />
-                </section>
-                
-                <section class="National-id">
-                    <label for="nationalId">Enter Your National Id</label>
-                    <input type="text" placeholder="Enter Your National Id" id="nationalId" name="nationalId" />
+                    <input type="email" placeholder="Enter Your Email" name="email" id="email"/>
                 </section>
                 
                 <section class="phone">
@@ -50,14 +55,54 @@
                     <input type="tel" placeholder="Enter Your phone number" name="phone" id="phone"/>
                 </section>
 
-                <section class="department">
-                    <label for="department" class="label">If You Are A Student, Enter the Department, and if you are a
-                        graduate, write your graduation year</label>
-                    <input type="text" placeholder="Enter Your Department" id="department" name="department">
+                <section class="National-id">
+                    <label for="nationalId">Enter Your National Id</label>
+                    <input type="text" placeholder="Enter Your National Id" id="nationalId" name="nationalId" />
                 </section>
-                <section class="image-form">
-                    <label for="image" class="label">Attach aa img of your national id card</label>
-                    <input type="file" id="image" />
+
+                <section class="National-id-front">
+                    <label for="nationalIdFront">National id photo (Front)</label>
+                    <input type="file" id="nationalIdFront" name="nationalIdFront" />
+                </section>
+
+                <section class="National-id-back">
+                    <label for="nationalIdBack">National id photo (Back)</label>
+                    <input type="file" id="nationalIdBack" name="nationalIdBack" />
+                </section>
+
+                <section class="personal-photo">
+                    <label for="personalPhoto">Personal Photo</label>
+                    <input type="file" id="personalPhoto" name="personalPhoto" />
+                </section>
+
+                <section class="un">
+                    <label for="un">Enter the name of your university</label>
+                    <input type="text" placeholder="Enter the name of your university" id="un" name="un"> 
+                </section>
+
+                <section class="Faculty">
+                    <label for="Faculty">Enter the name of your Faculty</label>
+                    <input type="text" placeholder="Enter the name of your Faculty" id="Faculty" name="Faculty"> 
+                </section>
+
+                <section class="Major">
+                    <label for="Major">Enter the name of your Major</label>
+                    <input type="text" placeholder="Enter the name of your Major" id="Major" name="Major"> 
+                </section>
+
+                <section class="academic-year">
+                    <label for="academicYear">Enter the academic year</label>
+                    <input type="text" placeholder="Enter the academic year" id="academicYear" name="academicYear"> 
+                </section>
+                
+                <section class="about">
+                    <label for="about"> How did you hear about the conference</label>
+                    <input type="text" id="about" name="about" placeholder="How did you hear about the conference">
+                </section>
+
+                <section class="comments">
+                    <label for="comments"> Any comments</label>
+                    <input type="text" id="comments" name="comments" placeholder="Any comments">
                 </section>
                 <button>Send <i class="fa-solid fa-arrow-right"></i></button>
             </form>
