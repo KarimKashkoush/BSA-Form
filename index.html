@@ -18,12 +18,20 @@
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet" />
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){emailjs.init({publicKey: "mi-iZuabwWCJt41OO",});})();
+    </script>
 </head>
+
 
 <body>
     <section class="home">
         <section class="container">
-            <form name="contact-form" class="contact-form">
+            <form name="contact-form" class="contact-form" id="sendEmail">
                 <h2>registration form</h2>
                 <section class="name-ar">
                     <label for="nameAr">Enter your full name in Arabic</label>
@@ -59,15 +67,14 @@
                     <input type="text" placeholder="Enter Your National Id" id="nationalId" name="nationalId" />
                 </section>
 
-                <section class="National-id-back">
-                    <label for="nationalIdBack">Enter the link to the pictures on Google Drive <br> ( Personal Photo - National id photo (Front) - National id photo (Back)
-                        )</label>
-                    <input type="text" id="nationalIdBack" name="nationalIdBack" placeholder="Enter the link to the pictures on me Google Drive"/>
+                <section class="photos">
+                    <label for="photos">Enter the link to the pictures on Google Drive <br> ( Personal Photo - National id photo (Front) - National id photo (Back)) <br> <span>Remember to access the link</span> </label>
+                    <input type="text" id="photos" name="photos" placeholder="Enter the link to the pictures on me Google Drive"/>
                 </section>
 
                 <section class="un">
                     <label for="un">Enter the name of your university-Institute</label>
-                    <input type="text" placeholder="Enter the name of your university-Institute" id="un" name="un"> 
+                    <input type="text" placeholder="Enter the name of your university-Institute" id="unIn" name="un"> 
                 </section>
 
                 <section class="Faculty">
@@ -94,7 +101,7 @@
                     <label for="comments"> Any comments</label>
                     <input type="text" id="comments" name="comments" placeholder="Any comments">
                 </section>
-                <button>Send <i class="fa-solid fa-arrow-right"></i></button>
+                <button >Send <i class="fa-solid fa-arrow-right"></i></button>
             </form>
             <section class="image">
                 <img src="assets/images/logo.png">

@@ -2,7 +2,7 @@
     --fw-Medium-500: 500;
     --fw-SemiBold-600: 600;
     --fw-Bold-700: 700;
-    --fw-ExtraBold-800 : 800;
+    --fw-ExtraBold-800: 800;
 
     --transition-3: ease 0.3s;
     --transition-5: ease 0.5s;
@@ -17,7 +17,7 @@
 
 body {
     scroll-behavior: smooth;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Cairo", sans-serif;
     overflow-x: hidden;
 }
 
@@ -106,6 +106,7 @@ a {
         width: 1150px;
     }
 }
+
 /* Start home */
 .home {
     background-color: #e0e0e0d0;
@@ -121,9 +122,11 @@ a {
     text-align: center;
     gap: 100px;
 }
+
 .home .container {
     align-items: flex-start;
 }
+
 .contact-form h2 {
     text-transform: capitalize;
     font-size: 32px;
@@ -131,12 +134,11 @@ a {
     color: #0086cf;
 }
 
-
 .contact-form input,
 select {
     border: none;
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px 15px;
     border-radius: 100px;
     width: 100%;
@@ -145,9 +147,13 @@ select {
 
 label {
     display: block;
-    padding: 10px 30px;
+    padding: 5px 30px;
     color: #0086cf;
     text-transform: capitalize;
+}
+
+label span {
+    color: red;
 }
 
 .contact-form button {
@@ -158,6 +164,10 @@ label {
     border-radius: 100px;
     cursor: pointer;
     color: #0086cf;
+}
+.contact-form button:focus {
+    background-color: #0086cf;
+    color: #fff;
 }
 
 .container .image {
@@ -184,9 +194,10 @@ label {
 
 @keyframes rotate {
     100% {
-        rotate : 360deg;
+        rotate: 360deg;
     }
 }
+
 .container .image img {
     width: 400px;
     height: 400px;
@@ -198,11 +209,11 @@ label {
 }
 
 @media (min-width: 1200px) {
-        .container .image {
-            position: sticky;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .container .image {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 @media (max-width: 1200px) {
@@ -211,14 +222,17 @@ label {
         gap: 30px;
         align-items: center;
     }
-    .container .image  {
+
+    .container .image {
         width: 310px;
         height: 310px;
     }
+
     .container .image img {
         width: 300px;
         height: 300px;
     }
+
     .container .contact-form {
         width: 100%;
     }
@@ -229,6 +243,7 @@ label {
         width: 210px;
         height: 210px;
     }
+
     .container .image img {
         width: 200px;
         height: 200px;
@@ -240,6 +255,7 @@ label {
         width: 160px;
         height: 160px;
     }
+
     .container .image img {
         width: 150px;
         height: 150px;
