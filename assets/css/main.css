@@ -110,7 +110,7 @@ a {
 .home {
     background-color: #e0e0e0d0;
     min-height: 100vh;
-    padding-block: 30px;
+    padding-block: 100px;
 }
 
 .container,
