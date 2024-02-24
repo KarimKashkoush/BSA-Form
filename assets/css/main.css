@@ -165,17 +165,13 @@ label span {
 .contact-form button {
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: #0086cf;
   padding: 15px 20px;
   border-radius: 100px;
   cursor: pointer;
-  color: #0086cf;
-}
-
-.home .contact-form button:focus {
-  background-color: #0086cf;
   color: #fff;
 }
+
 
 .container .contact-form {
   flex: 2;
