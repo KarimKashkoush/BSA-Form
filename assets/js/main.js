@@ -11,8 +11,10 @@ let faculty = document.getElementById("Faculty")
 let major = document.getElementById("Major")
 let year = document.getElementById("academicYear")
 let conference = document.getElementById("about")
-let CommentInput = document.getElementById("comments")
+let comments = document.getElementById("comments")
 let sendEmail = document.getElementById("sendEmail")
+
+
 
 let submit = false
 
@@ -262,14 +264,14 @@ sendEmail.addEventListener('submit', (e) => {
         faculty: faculty.value,
         major: major.value,
         year: year.value,
-        conference: conference.value,
-        Comment: CommentInput.value,
     }
 
     emailjs.send(ServiceID, TemplateID, inputData)
 })
 
 
+
+let loading = document.getElementById("loading")
 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxuwrpOBWh3ieCAadNzgfowrFGqQ4ZcOkEm1eoBHtwd2Fdc1dnNUphMlUEyALEim9QC/exec'
@@ -279,14 +281,18 @@ const form = document.forms['contact-form']
 form.addEventListener('submit', e => {
     e.preventDefault()
     if (submit === true) {
+        loading.classList.add("show")
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => Swal.fire({
-                title: "Form Is Send!",
-                text: "You clicked the button!",
-                icon: "success"
-            }))
-            .then(() => { window.location.reload(); })
-            .catch(error => console.error('Error!', error.message))
+        .then(response => Swal.fire({
+            title: "Form Is Send!",
+            text: "You clicked the button!",
+            icon: "success"
+        }))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+    } else {
+        console.log("bbb")
+
     }
 })
 
