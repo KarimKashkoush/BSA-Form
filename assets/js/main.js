@@ -6,7 +6,7 @@ let emailInput = document.getElementById("email")
 let phone = document.getElementById("phone")
 let nationalId = document.getElementById("nationalId")
 let Front = document.getElementById("Front")
-let photos = document.getElementById("Back")
+let Back = document.getElementById("Back")
 let personalPhoto = document.getElementById("personalPhoto")
 let unIn = document.getElementById("unIn")
 let faculty = document.getElementById("Faculty")
@@ -178,7 +178,7 @@ personalPhoto.onblur = () => {
 // chech Front
 function FrontChech() {
     if (Front.value == "") {
-        setError(photos, "Link for photo is required")
+        setError(Front, "Link for photo is required")
     } else if (Front.value.length < 10) {
         setError(Front, "your link is wrong")
     } else {
@@ -292,6 +292,7 @@ sendEmail.addEventListener('submit', (e) => {
         email: emailInput.value,
         phone: phone.value,
         nationalId: nationalId.value,
+        personalPhoto: personalPhoto.value,
         id_front: Front.value,
         id_back: Back.value,
         unIn: unIn.value,
@@ -317,6 +318,7 @@ form.addEventListener('submit', e => {
     if (submit === true) {
         loading.classList.add("show")
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        loading.classList.remove("show")
             .then(response => Swal.fire({
                 title: "Form Is Send!",
                 text: "You clicked the button!",
