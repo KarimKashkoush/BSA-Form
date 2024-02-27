@@ -184,6 +184,10 @@ select {
   text-align: center;
 }
 
+.contact-form input::placeholder {
+  text-transform: capitalize;
+}
+
 .contact-form>section {
   margin-bottom: 10px;
 }

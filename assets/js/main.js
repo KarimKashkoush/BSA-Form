@@ -1,10 +1,12 @@
 let nameArabic = document.getElementById("nameAr")
 let nameEnglish = document.getElementById("nameEn")
 let gender = document.getElementById("Gender")
+let age = document.getElementById("age")
 let emailInput = document.getElementById("email")
 let phone = document.getElementById("phone")
 let nationalId = document.getElementById("nationalId")
-let photos = document.getElementById("photos")
+let Front = document.getElementById("Front")
+let photos = document.getElementById("Back")
 let personalPhoto = document.getElementById("personalPhoto")
 let unIn = document.getElementById("unIn")
 let faculty = document.getElementById("Faculty")
@@ -50,16 +52,18 @@ sendEmail.onsubmit = (e) => {
     nameArCheck()
     nameEnCheck()
     emailChech()
+    ageChek()
     checkPhone()
     idCheck()
     personalPhotoChech()
-    photosChech()
+    BackChech()
+    FrontChech()
     unInCheck()
     facultyCheck()
     majorCheck()
     yearCheck()
-    conferenceCheck()
     commentsCheck()
+    confeCheck()
 
     if (submit === false) {
         e.preventDefault()
@@ -92,6 +96,20 @@ function nameEnCheck() {
 }
 nameEnglish.onblur = () => {
     nameEnCheck()
+}
+
+// check Age
+function ageChek() {
+    if (age.value == "") {
+        setError(age, "age is required")
+    } else if (age.value.length < 2 || age.value <= 0) {
+        setError(age, "Your age is wrong")
+    } else {
+        setSucces(age)
+    }
+}
+age.onblur = () => {
+    ageChek()
 }
 
 // check email
@@ -157,18 +175,32 @@ personalPhoto.onblur = () => {
     personalPhotoChech()
 }
 
-// chech photos
-function photosChech() {
-    if (photos.value == "") {
-        setError(photos, "Link for photos is required")
-    } else if (photos.value.length < 10) {
-        setError(photos, "your link is wrong")
+// chech Front
+function FrontChech() {
+    if (Front.value == "") {
+        setError(photos, "Link for photo is required")
+    } else if (Front.value.length < 10) {
+        setError(Front, "your link is wrong")
     } else {
-        setSucces(photos)
+        setSucces(Front)
     }
 }
-photos.onblur = () => {
-    photosChech()
+Front.onblur = () => {
+    FrontChech()
+}
+
+// chech Back
+function BackChech() {
+    if (Back.value == "") {
+        setError(Back, "Link for photo is required")
+    } else if (Back.value.length < 10) {
+        setError(Back, "your link is wrong")
+    } else {
+        setSucces(Back)
+    }
+}
+Back.onblur = () => {
+    BackChech()
 }
 
 // check un-in
@@ -222,7 +254,7 @@ year.onblur = () => {
 }
 
 // check Conference
-function conferenceCheck() {
+function confeCheck() {
     if (conference.value == "") {
         setError(conference, "Conference is required")
     } else {
@@ -230,7 +262,7 @@ function conferenceCheck() {
     }
 }
 conference.onblur = () => {
-    conferenceCheck()
+    confeCheck()
 }
 
 // check Comments
@@ -256,10 +288,12 @@ sendEmail.addEventListener('submit', (e) => {
         nameArabic: nameArabic.value,
         nameEnglish: nameEnglish.value,
         gender: gender.value,
+        age: age.value,
         email: emailInput.value,
         phone: phone.value,
         nationalId: nationalId.value,
-        photos: photos.value,
+        id_front: Front.value,
+        id_back: Back.value,
         unIn: unIn.value,
         faculty: faculty.value,
         major: major.value,
@@ -283,20 +317,12 @@ form.addEventListener('submit', e => {
     if (submit === true) {
         loading.classList.add("show")
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => Swal.fire({
-            title: "Form Is Send!",
-            text: "You clicked the button!",
-            icon: "success"
-        }))
-        .then(() => { window.location.reload(); })
-        .catch(error => console.error('Error!', error.message))
-    } else {
-        console.log("bbb")
-
+            .then(response => Swal.fire({
+                title: "Form Is Send!",
+                text: "You clicked the button!",
+                icon: "success"
+            }))
+            .then(() => { window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
     }
 })
-
-
-
-
-

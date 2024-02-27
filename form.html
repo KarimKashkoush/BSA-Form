@@ -63,6 +63,15 @@
                         <option value="female">Female</option>
                     </select>                        
                 </section>
+
+                <section class="age">
+                    <label for="age">Enter your age <span>*</span></label>
+                    <section class="content-input">
+                        <input type="number" placeholder="Enter Your age" id="age" name="age" />
+                        <i class="fa-solid"></i>
+                    </section>
+                    <span class="errorma"></span>
+                </section>
                 
                 <section class="email">
                     <label for="email">Enter Your Email <span>*</span></label>
@@ -101,9 +110,18 @@
                 </section>
 
                 <section class="photos">
-                    <label for="photos">Enter the link to the pictures on Google Drive <br> ( National id photo (Front) - National id photo (Back) ) <span>*</span> <br> <span>Remember to access the link</span> </label>
+                    <label for="Front">Enter the link to the National id photo (Front) on Google Drive <span>*</span> <br> <span>Remember to access the link</span> </label>
                     <section class="content-input">
-                        <input type="text" id="photos" name="photos" placeholder="Enter the link to the pictures on me Google Drive" />
+                        <input type="text" id="Front" name="Front" placeholder="Enter the link to the National id photo (Front) on Google Drive" />
+                        <i class="fa-solid"></i>
+                    </section>
+                    <span class="errorma"></span>
+                </section>
+
+                <section class="photos">
+                    <label for="Back">Enter the link to the National id photo (Back) on Google Drive<span>*</span> <br> <span>Remember to access the link</span> </label>
+                    <section class="content-input">
+                        <input type="text" id="Back" name="Back" placeholder="Enter the link to the National id photo (Back) on Google Drive" />
                         <i class="fa-solid"></i>
                     </section>
                     <span class="errorma"></span>
@@ -148,7 +166,7 @@
                 <section class="about">
                     <label for="about"> How did you hear about the conference <span>*</span></label>
                     <section class="content-input">
-                        <input type="text" id="about" name="Conference" placeholder="How did you hear about the conference" >
+                        <input type="text" id="about" name="about" placeholder="How did you hear about the conference" >
                         <i class="fa-solid"></i>
                     </section>
                     <span class="errorma"></span>
