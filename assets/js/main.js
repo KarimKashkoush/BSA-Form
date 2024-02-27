@@ -318,7 +318,6 @@ form.addEventListener('submit', e => {
     if (submit === true) {
         loading.classList.add("show")
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        loading.classList.remove("show")
             .then(response => Swal.fire({
                 title: "Form Is Send!",
                 text: "You clicked the button!",
