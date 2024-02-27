@@ -345,6 +345,10 @@ label span {
   position: relative;
 }
 
+.time {
+  display: none;
+}
+
 .contetnt-logo-inf h2::before {
   content: "";
   position: absolute;

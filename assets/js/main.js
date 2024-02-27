@@ -15,8 +15,10 @@ let year = document.getElementById("academicYear")
 let conference = document.getElementById("about")
 let comments = document.getElementById("comments")
 let sendEmail = document.getElementById("sendEmail")
+let timeNow = document.getElementById("time")
 
 
+console.log(timeNow.value)
 
 let submit = false
 
@@ -49,6 +51,7 @@ let setError = (ele, errorMa) => {
 }
 
 sendEmail.onsubmit = (e) => {
+
     nameArCheck()
     nameEnCheck()
     emailChech()
@@ -64,6 +67,13 @@ sendEmail.onsubmit = (e) => {
     yearCheck()
     commentsCheck()
     confeCheck()
+    let time = new Date()
+    let hours = time.getHours()
+    let min = time.getMinutes()
+    let sec = time.getSeconds()
+    let mon = time.getMonth() + 1
+    let day = time.getDate()
+    timeNow.value = `${hours} : ${min} : ${sec} -- ${day}/${mon}`
 
     if (submit === false) {
         e.preventDefault()
