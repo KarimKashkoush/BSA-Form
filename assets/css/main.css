@@ -417,6 +417,10 @@ label span {
   left: 0;
 }
 
+.whatsApp {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .contetnt-logo-inf h2 {
     font-size: 40px;
