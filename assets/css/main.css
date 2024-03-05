@@ -289,6 +289,7 @@ label span {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 
 .main .container {
@@ -507,4 +508,29 @@ label span {
   .contetnt-logo-bsa h2 {
     font-size: 60px;
   }
+}
+
+.closed {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../images/باك\ 1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.closed img {
+  width: 500px;
+  max-width: 100%;
+}
+.closed p {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
 }

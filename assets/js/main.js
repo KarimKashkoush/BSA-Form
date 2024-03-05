@@ -289,31 +289,31 @@ comments.onblur = () => {
 }
 
 
-let ServiceID = "service_sefvrak";
-let TemplateID = "template_3benccc";
+// let ServiceID = "service_sefvrak";
+// let TemplateID = "template_3benccc";
 
-sendEmail.addEventListener('submit', (e) => {
-    e.preventDefault();
+// sendEmail.addEventListener('submit', (e) => {
+//     e.preventDefault();
 
-    const inputData = {
-        nameArabic: nameArabic.value,
-        nameEnglish: nameEnglish.value,
-        gender: gender.value,
-        age: age.value,
-        email: emailInput.value,
-        phone: phone.value,
-        nationalId: nationalId.value,
-        personalPhoto: personalPhoto.value,
-        id_front: Front.value,
-        id_back: Back.value,
-        unIn: unIn.value,
-        faculty: faculty.value,
-        major: major.value,
-        year: year.value,
-    }
+//     const inputData = {
+//         nameArabic: nameArabic.value,
+//         nameEnglish: nameEnglish.value,
+//         gender: gender.value,
+//         age: age.value,
+//         email: emailInput.value,
+//         phone: phone.value,
+//         nationalId: nationalId.value,
+//         personalPhoto: personalPhoto.value,
+//         id_front: Front.value,
+//         id_back: Back.value,
+//         unIn: unIn.value,
+//         faculty: faculty.value,
+//         major: major.value,
+//         year: year.value,
+//     }
 
-    emailjs.send(ServiceID, TemplateID, inputData)
-})
+//     emailjs.send(ServiceID, TemplateID, inputData)
+// })
 
 
 
